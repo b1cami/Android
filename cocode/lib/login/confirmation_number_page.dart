@@ -24,8 +24,8 @@ class _CertifyCodePageState extends State<CertifyCodePage> {
           key: _key,
           child: Column(
             children: <Widget>[
-              Expanded(
-                child: Container(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 7,
               ),
               TextFormField(
                 maxLength: 6,
@@ -40,6 +40,9 @@ class _CertifyCodePageState extends State<CertifyCodePage> {
                 },
                 onSaved: (newValue) => _number = newValue,
                 keyboardType: TextInputType.number,
+              ),
+              Expanded(
+                child: Container(),
               ),
               Row(
                 children: <Widget>[

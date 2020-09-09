@@ -27,6 +27,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: mainColor,
       body: Form(
         key: _key,
@@ -36,8 +37,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Expanded(
-                  child: Container(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 10,
                 ),
                 TextFormField(
                   textInputAction: TextInputAction.next,
@@ -145,6 +146,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                   },
                   onSaved: (newValue) => _password = newValue,
                 ),
+                Expanded(
+                  child: Container(),
+                ),
                 Row(
                   children: <Widget>[
                     FlatButton(
@@ -196,7 +200,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
     );
 
     Map<String, dynamic> data = jsonDecode(response.body);
-
+    print(data);
     if (data['status'] == 200) {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => CertifyCodePage()));
