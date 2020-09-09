@@ -1,14 +1,12 @@
 import 'package:cocode/colors.dart';
-import 'package:cocode/main_screens/chat_list_page.dart';
 import 'package:cocode/community/community_page.dart';
 import 'package:cocode/main_screens/home_page.dart';
 import 'package:cocode/main_screens/setting_page.dart';
-import 'package:cocode/profile_screens/user_list_page.dart';
 import 'package:flutter/material.dart';
 
 int _index = 0;
-List _pages = [HomePage(), ChatListPage(), CommunityPage(), SettingPage()];
-List _titles = ['홈', '채팅방', '커뮤니티', '설정'];
+List _pages = [HomePage(), CommunityPage(), SettingPage()];
+List _titles = ['홈', '커뮤니티', '설정'];
 
 class TapPage extends StatefulWidget {
   @override
@@ -38,10 +36,6 @@ class _TapPageState extends State<TapPage> {
           BottomNavigationBarItem(
             title: Text('홈'),
             icon: Icon(Icons.account_circle),
-          ),
-          BottomNavigationBarItem(
-            title: Text('채팅'),
-            icon: Icon(Icons.message),
           ),
           BottomNavigationBarItem(
             title: Text('커뮤니티'),

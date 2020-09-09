@@ -20,6 +20,7 @@ class _AddInquiredPageState extends State<AddInquiredPage> {
 
   @override
   Widget build(BuildContext context) {
+    print('helloi world');
     return Scaffold(
       appBar: AppBar(
         backgroundColor: white,
