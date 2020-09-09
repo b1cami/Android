@@ -185,7 +185,9 @@ class _PostViewPageState extends State<PostViewPage> {
   uploadDateTime(DateTime dateTime) {
     String time = '분 전';
     int date = DateTime.now().difference(dateTime).inMinutes;
-
+    if (date < 0) {
+      date *= -1;
+    }
     if (date > 56) {
       date = date ~/ 60;
       time = '시간 전';

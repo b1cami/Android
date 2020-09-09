@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               if (snapshot.hasData) {
                 var breakfast = snapshot.data[0];
                 var lunch = snapshot.data[1];
-                var dinner = snapshot.data[1];
+                var dinner = snapshot.data[2];
                 return Row(
                   children: <Widget>[
                     Card(

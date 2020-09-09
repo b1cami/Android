@@ -134,7 +134,7 @@ class _InquiredPageState extends State<InquiredPage> {
     String time = '분 전';
     int date = DateTime.now().difference(dateTime).inMinutes;
 
-    if (date > 56) {
+    if (date > 59) {
       date = date ~/ 60;
       time = '시간 전';
     }

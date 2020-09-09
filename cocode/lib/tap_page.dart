@@ -29,15 +29,14 @@ class _TapPageState extends State<TapPage> {
       ),
       body: _pages[_index],
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        elevation: 0.0,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: mainColor,
+        backgroundColor: white,
         onTap: onTapped,
         currentIndex: _index,
         items: [
           BottomNavigationBarItem(
-            title: Text('주소록'),
+            title: Text('홈'),
             icon: Icon(Icons.account_circle),
           ),
           BottomNavigationBarItem(
@@ -45,7 +44,7 @@ class _TapPageState extends State<TapPage> {
             icon: Icon(Icons.message),
           ),
           BottomNavigationBarItem(
-            title: Text('채팅'),
+            title: Text('커뮤니티'),
             icon: Icon(Icons.assignment),
           ),
           BottomNavigationBarItem(
